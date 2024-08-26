@@ -5,7 +5,7 @@ export const handleOnChange = <T extends Record<string, any>>(
   setForm: (updater: (prevState: T) => T) => void,
   e: React.ChangeEvent<HTMLInputElement>
 ) => {
-  const { name, value } = mapEventToNameAndValue(e, setForm);
+  const { name, value } = mapEventToNameAndValue(e);
   setForm((prev) => ({ ...prev, [name]: value }));
 };
 
@@ -14,8 +14,7 @@ const mapEventToNameAndValue = <
   T extends Record<string, any>,
   K extends keyof T
 >(
-  e: React.ChangeEvent<HTMLInputElement>,
-  setForm: (updater: (prevState: T) => T) => void
+  e: React.ChangeEvent<HTMLInputElement>
 ): { name: K; value: T[K] } => {
   const { name, value } = e.target;
   return { name: name as K, value: value as T[K] };

@@ -7,7 +7,7 @@ import type {
 } from '../interfaces/LoginInterface';
 
 export const logoutService = () => {
-  return postData({
+  return postData<LoggedUser>({
     key: 'logout',
     url: `${Server1API}/auth/logout`,
     method: 'GET',

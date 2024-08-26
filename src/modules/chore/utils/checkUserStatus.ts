@@ -11,6 +11,12 @@ export const checkUserStatus = ({
   negativeRoles?: number[];
 }): boolean => {
   const user = useStore($user);
+  if (!user.isLoggedIn && !isLoggedIn) {
+    return true;
+  }
+  if (!user.isLoggedIn && isLoggedIn) {
+    return false;
+  }
   // Verificar si el usuario tiene alguno de los negativeRoles
   const hasNegativeRoles = negativeRoles.some((negativeRole) =>
     user.roles.includes(negativeRole)

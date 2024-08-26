@@ -25,7 +25,7 @@ export const useIsLoggedInHandle = ({ user }: { user: AuthDataProps }) => {
   }, [user, status, error]);
 
   const handleLogout = () => {
-    mutate({});
+    mutate(null);
   };
 
   return {

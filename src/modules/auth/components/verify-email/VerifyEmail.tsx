@@ -11,7 +11,7 @@ export const VerifyEmail = ({ token }: { token: string }) => {
   const { status, mutate } = verifyEmailService({ token });
   useEffect(() => {
     if (token) {
-      mutate({});
+      mutate(null);
     }
   }, [token]);
 
