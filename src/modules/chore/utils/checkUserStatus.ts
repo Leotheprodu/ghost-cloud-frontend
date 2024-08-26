@@ -18,12 +18,12 @@ export const checkUserStatus = ({
     return false;
   }
   // Verificar si el usuario tiene alguno de los negativeRoles
-  const hasNegativeRoles = negativeRoles.some((negativeRole) =>
+  const hasNegativeRoles = negativeRoles?.some((negativeRole) =>
     user.roles.includes(negativeRole)
   );
 
   // Si el usuario tiene algún rol negativo, devolver false
-  if (hasNegativeRoles) {
+  if (negativeRoles && hasNegativeRoles) {
     return false;
   }
 
