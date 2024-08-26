@@ -1,8 +1,7 @@
 import countryCodesJson from '../data/country-codes.json';
 
 export const appName = 'Ghost Cloud';
-export const Server1API = 'http://localhost:3000';
-
+export const Server1API = import.meta.env.PUBLIC_API_URL_1;
 export const userRoles = {
   Admin: {
     id: 1,
