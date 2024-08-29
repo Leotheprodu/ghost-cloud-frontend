@@ -8,13 +8,13 @@ import type { LinksProps } from '@/modules/chore/interfaces/NavbarInterfaces';
 export const ResponsiveNavBar = ({ pathName }: { pathName: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const links: LinksProps[] = [
-    {
+    /* {
       name: 'Contacto',
       href: '/contacto',
       isLoggedIn: false,
       roles: [],
       negativeRoles: [userRoles.Admin.id],
-    },
+    }, */
     {
       name: 'Mis servicios',
       href: '/mis-servicios',
