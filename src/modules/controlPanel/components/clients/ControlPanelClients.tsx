@@ -26,7 +26,7 @@ export const ControlPanelClients = () => {
             />
           </div>
           <h1 className="text-lg font-bold my-5">Listado de Clientes</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap md:justify-start justify-center items-center gap-4">
             {filteredData?.map((client) => (
               <ControlPanelClientCard
                 key={client.id}

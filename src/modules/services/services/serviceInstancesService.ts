@@ -9,7 +9,7 @@ import type { UpdateClientServiceInstance } from '@/modules/controlPanel/interfa
 export const getServiceInstancesbyUser = ({ userId }: { userId: number }) => {
   return fetchData<ServiceInstance[]>({
     key: 'ServiceInstanceService',
-    url: `${Server1API}/services/instances/${userId}`,
+    url: `${Server1API}/services/user-instances/${userId}`,
   });
 };
 export const getServiceInstancesbyInstanceId = ({

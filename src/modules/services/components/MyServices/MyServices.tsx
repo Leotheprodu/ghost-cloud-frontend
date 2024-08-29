@@ -23,7 +23,7 @@ export const MyServices = () => {
           Aquí podrás ver los servicios que has contratado
         </p>
         {status === 'success' && (
-          <div className="flex flex-wrap gap-3">
+          <div className="flex items-center justify-center flex-wrap gap-3">
             {data.map((service) => (
               <CardMyServices key={service.id} service={service} />
             ))}
